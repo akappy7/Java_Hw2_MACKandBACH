@@ -1,0 +1,25 @@
+public class Constant extends Seq{
+
+        protected int num;
+        protected int value;
+
+        public Constant(int num, int value){
+                this.num = num;
+                this.value = value;
+
+        }
+
+        public  String toString(){	
+
+		if(this.num == 0)
+                {
+                        return String.format("[ " + this.num + " : 0 ]");
+
+                }
+
+                return String.format("[ " + this.num + " : " + this.value + " ]");
+
+        }
+
+}
+
