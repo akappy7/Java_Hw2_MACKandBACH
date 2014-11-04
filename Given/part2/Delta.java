@@ -22,6 +22,15 @@ public class Delta extends Seq{
 
         }
 
+        public int min(){
+                if(num == 0)
+                        return 0;
+                else if(delta <= 0) { // if delta is negative the last element in the sequence will be min
+                        return initial + delta * (num - 1);
+                } else
+                        return initial;
+        }
+
 
 }
 

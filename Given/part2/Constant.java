@@ -21,5 +21,12 @@ public class Constant extends Seq{
 
         }
 
+        public int min(){
+                if(num == 0)
+                        return 0;
+                else
+                        return value;
+        }
+
 }
 

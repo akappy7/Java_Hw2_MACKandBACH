@@ -24,5 +24,18 @@ public class Jumble extends Seq{
 		temp = temp + " }";	
 		return String.format(temp);
         }
+
+
+  public int min() {
+  	if(value.length == 0)
+  		return 0;
+  	
+  	int min = value[0];
+  	for(int i = 0; i < value.length; i++)
+  		if(value[i] < min)
+  			min = value[i];
+
+  	return min;
+  }
 }
 
