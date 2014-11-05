@@ -1,6 +1,5 @@
 public class Delta extends Seq{
 
-        protected int num;
         protected int initial;
         protected int delta;
 

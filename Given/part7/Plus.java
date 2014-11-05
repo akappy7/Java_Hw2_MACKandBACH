@@ -32,7 +32,7 @@ public class Plus {
 	}
 
 	public static Seq plus (Constant c1, Delta d1) {
-		int smaller = Math.min(d1.num, d1.num);
+		int smaller = Math.min(c1.num, d1.num);
 		return new Delta(smaller, d1.initial + c1.value, d1.delta);
 	}
 	
@@ -64,16 +64,12 @@ public class Plus {
 		SeqIt it2 = s2.createSeqIt();
 		int i = 0;
 		int retAr[] = new int[Math.min(s1.num, s2.num)];
-		if(retAr.length == 0) {
-			System.out.println("0 length");
-			System.exit(1);
-		}
+		if(retAr.length == 0)
+			return new int[0];
 		//want the return array to be the size of the smaller sequence
 
-		while(it1.hasNext() && it2.hasNext()) {
-			retAr[i] = it1.next() + it2.next();
-			i++;
-		}
+		while(it1.hasNext() && it2.hasNext())
+			retAr[i++] = it1.next() + it2.next();
 
 		return retAr;
 	}

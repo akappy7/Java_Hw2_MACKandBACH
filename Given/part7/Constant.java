@@ -1,6 +1,5 @@
 public class Constant extends Seq{
 
-        protected int num;
         protected int value;
 
         public Constant(int num, int value){

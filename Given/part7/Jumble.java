@@ -1,7 +1,6 @@
 public class Jumble extends Seq{
 
         int[] value;
-	int num;
         public Jumble(int [] value){
 
                 this.num = value.length;
