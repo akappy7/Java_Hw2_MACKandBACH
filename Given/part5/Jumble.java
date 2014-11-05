@@ -37,5 +37,9 @@ public class Jumble extends Seq{
 
   	return min;
   }
+
+  public SeqIt createSeqIt() {
+          return new JumbleIt(this);
+  }
 }
 

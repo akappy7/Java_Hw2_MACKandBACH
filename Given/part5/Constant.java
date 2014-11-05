@@ -28,5 +28,9 @@ public class Constant extends Seq{
                         return value;
         }
 
+        public SeqIt createSeqIt() {
+                return new ConstantIt(this);
+        }
+
 }
 

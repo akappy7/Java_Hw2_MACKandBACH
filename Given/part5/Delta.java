@@ -31,6 +31,10 @@ public class Delta extends Seq{
                         return initial;
         }
 
+        public SeqIt createSeqIt() {
+                return new DeltaIt(this);
+        }
+
 
 }
 
