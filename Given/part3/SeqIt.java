@@ -5,4 +5,7 @@ public interface SeqIt {
     public boolean hasNext();
     // return the next element and advance iterator to following item.
     public int next();
+    //private int position;
+    //private Seq S; 
+    
 }
