@@ -2,9 +2,13 @@
 *** repeat it for each group member;
 *** list group members alphabetically by last name
 
-Name(last): xxxx
-Name(first): xxxx
-Login_ID: xxxxx
+Name(last): Kapbasov
+Name(first): Arman
+Login_ID: akap
+
+Name(last): Mackey
+Name(first): Steven
+Login_ID: ssmackey
 
 *** Give the status of your work; here's a sample.
 
@@ -14,9 +18,18 @@ part1: Works on all tests.
 part2: Works on all tests.
 part3: Works on all tests.
 part4: Works on all tests.
-part5: Works on only the first test case.
-part6: Didn't attempt.
-part7: Didn't attempt.
-part8: Didn't attempt.
+part5: Works on all tests.
+part6: Works on all tests.
+part7: Works on all tests.
+part8: Works on all tests.
 
 Overall: Any comment/discussion related to this HW.
+
+For part8 we feel that our methodology was fairly elegant. 
+	Not only is there no redundancy in the code through our use of polymorphism,
+	but there are also no redundant while loops or checks. Everything is done in 
+	one loop through of the sequence and the status of the resulting sequence being
+	a constant or a delta, with constant being preferred. We saw early on that certain 
+	conditions can be checked to see right away if a delta plus another delta can be a 
+	const, and also if delta+delta=delta or const+delta=delta. However we feel that
+	addressing such certain special cases detracts from the elegance and generality of the code.
