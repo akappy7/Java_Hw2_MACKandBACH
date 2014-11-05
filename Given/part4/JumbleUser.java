@@ -31,4 +31,30 @@ public class JumbleUser{
         return temp;
     }
 
+    static int lengthLongestNDCSS2(Jumble j ) throws UsingIteratorPastEndException {
+        JumbleIt it  = new JumbleIt(j);
+        int maxCount = 0;
+        int count    = 0;
+        int current;
+        int past;
+        try {
+            past     = it.next(); //will throw an exception, count and max count will not change to 1
+            count    = 1;
+            maxCount = 1;
+            while(true) {
+                current = it.next();
+                if(current >= past) {
+                    count++;
+                    if(count > maxCount)
+                        maxCount = count;
+                } else
+                    count = 1;
+                past = current;
+            }
+        
+        } catch(UsingIteratorPastEndException e) {
+            return maxCount;
+        }
+    }
+
 }

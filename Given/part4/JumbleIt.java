@@ -16,12 +16,11 @@ public class JumbleIt implements SeqIt
             }
             return true;
         }
-        public int next()
+        public int next() throws UsingIteratorPastEndException
         {
             if (!hasNext())
             {
-                System.err.println("JumbleIt called past end");
-                System.exit(1);
+                throw new UsingIteratorPastEndException();
             }
            
             int returnValue = s.value[position-1];

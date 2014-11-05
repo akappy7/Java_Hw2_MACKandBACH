@@ -16,12 +16,11 @@ public class DeltaIt implements SeqIt
           }
           return true;
         }
-        public int next()
+        public int next() throws UsingIteratorPastEndException
         {
             if (!hasNext())
             {
-                 System.err.println("DeltaIt called past end");
-                 System.exit(1);
+              throw new UsingIteratorPastEndException();
             }
             int calcNum = 0;
             calcNum = (position-1) * s.delta + s.initial;

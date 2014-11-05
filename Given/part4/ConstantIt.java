@@ -18,12 +18,11 @@ public class ConstantIt implements SeqIt
         }   
         return true;
     }
-    public int next()
+    public int next() throws UsingIteratorPastEndException
     {
         if (!hasNext())
         {
-            System.err.println("ConstantIt called past end");
-            System.exit(1);    
+            throw new UsingIteratorPastEndException();
         }
         position++; 
         return s.value;
